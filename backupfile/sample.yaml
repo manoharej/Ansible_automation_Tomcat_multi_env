@@ -1,0 +1,13 @@
+- hosts: localhost
+  tasks:
+  - name: install AWS CLI java git curl wget
+    command: "sudo yum install curl -y"
+    command: "sudo yum install git -y"
+    command: "sudo yum install curl -y"
+    command: "sudo yum install wget -y"
+  - name: install java 11
+    command: "sudo amazon-linux-extras install java-openjdk11 -y"
+  - name: download tomcat
+    command: "wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.59/bin/apache-tomcat-9.0.59.tar.gz"
+  - name: Unzip file
+    command: "tar -xvzf apache-tomcat-9.0.59.tar.gz"
